@@ -1,0 +1,4 @@
+Django==3.2.3
+channels==3.0.3
+cryptography==3.4.7
+python-gnupg==0.4.7

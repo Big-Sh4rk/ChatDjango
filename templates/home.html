@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+</style>
+</head>
+<body>
+
+<div align="center">
+    <h2>Chat Asíncrono y Encriptado</h2>
+</div>
+
+
+<div class="container">
+    <style>
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+    .btn {
+
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-color: transparent;
+          border: 2px solid #e74c3c;
+          border-radius: 0.6em;
+          color: #e74c3c;
+          cursor: pointer;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-self: center;
+          -ms-flex-item-align: center;
+          align-self: center;
+          font-size: 1rem;
+            width: auto;
+          line-height: 1;
+          margin: 8px 0;
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+        padding: 14px 20px;
+        vertical-align:middle;
+        }
+
+        .btn:hover,
+        .btn:focus {
+          color: black;
+          outline: 0;
+        }
+
+        .entrar {
+          border-color: #9400D3;
+          color: black;
+          box-shadow: 0 0 40px 40px #9400D3 inset, 0 0 0 0 #9400D3;
+          -webkit-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
+
+        .entrar:hover {
+          box-shadow: 0 0 10px 0 #9400D3 inset, 0 0 10px 4px #9400D3;
+        }
+
+    input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    div {
+        text-align:center;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    </style>
+
+    <form id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+        <label>Sala de Chat</label>
+        <input type="text" name="room_name" id="room_name" width="100px" />
+        <label>Usuario</label>
+        <input type="text" name="username" id="username" width="100px" />
+        <button type="submit" class="btn entrar">Entrar al Chat</button>
+    </form>
+</div>
+
+
+</body>
+
+
+</html>
